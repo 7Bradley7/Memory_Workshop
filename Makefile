@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-MAIN	=	sources/main.c 		\
+MAIN	=	sources/my_malloc.c \
 
 SRC		=
 
