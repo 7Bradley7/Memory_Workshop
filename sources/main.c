@@ -8,10 +8,17 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
+
+int my_malloc(int nb)
+{
+    if (sbrk(nb) == -1)
+        return -1;
+    return 0;
+}
 
 int main(int argc, char *argv[])
 {
-    char *str = malloc(sizeof(char) * 13);
-    strcpy(str, "Hello World!");
+    my_malloc(5);
     return 0;
 }
